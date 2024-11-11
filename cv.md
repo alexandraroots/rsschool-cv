@@ -81,13 +81,13 @@ _M.Video–Eldorado (Nov 2020 - Aug 2021), Russia_
 
 - **ITMO University** (Aug 2022 - Jun 2024)
 
-   Machine learning engineering
+   _Machine learning engineering_
 
   _Grade_: Master
 
 - **Lomonosov Moscow State University (MSU)** (Sep 2017 - Jun 2021)
 
-   Computer Science
+   _Computer Science_
 
   _Grade_: Bachelor
 
