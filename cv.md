@@ -42,6 +42,14 @@ Python Developer with more than 5 years experience. I'm deep understanding Machi
 
 ## Experience
 
+### Middle Python Developer
+_Avito (Aug 2022 - Sep 2024), Russia/Armenia, Remote_
+
+- Created a micro-service for automation process to delivery commercial offers from DWH to CRM system.
+- Realized a monitoring dashboard with business metrics and tech metrics for microservice.
+- Implemented alerting process for failed with delivery process.
+- Improved delivery process for commercial offers, upgraded performance of system. In result: decreasing time to load in 3 times
+
 
 ### Middle Analyst-Developer 
 _Avito (Aug 2022 - Sep 2024), Russia/Armenia, Remote_
