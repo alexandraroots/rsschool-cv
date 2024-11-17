@@ -65,7 +65,7 @@
 					</ul>
 				</li>
 			</ul>
-
+			
 			<ul class="skills">
 				<li><img class="micro-image" src="images/javascript.png" alt="JavaScript">JavaScript</li>
 				<li><img class="micro-image" src="images/html.png" alt="HTML"><img class="micro-image"
@@ -100,8 +100,7 @@
 		<h1 style="text-align: right;">
 			Alexandra Korneeva
 			
-			<h2 class="dark">Python Developer | ML | CV
-				<br>
+			<h2 class="dark">
 				<img class="micro-image" src="images/tg.png" alt="Telegram">
 				<a href="https://github.com/alexandraroots" target="_blank">
 					<img class="micro-image" src="images/github.png" alt="Github">
@@ -110,17 +109,17 @@
 				<a href="mailto:korneevasandra@gmail.com">
 					<img class="micro-image" src="images/mail.png" alt="Mail" style="width: 25px">
 				</a>
-				
-				
+				Python Developer | ML | CV
+			
 			</h2>
 			
-					<div class="description" id="about_me">
-						Python Developer with more than 5 years experience <br>
-						I'm deep understanding Machine Learning and Computer Vision.</div>
+			<div class="description" id="about_me">
+				Python Developer with more than 5 years experience <br>
+				I'm deep understanding Machine Learning and Computer Vision.
+			</div>
 		</h1>
 		
 		
-
 		<div class="light_block">
 			
 			<h2 class="dark" id="experience">
@@ -129,7 +128,11 @@
 				<h3 class="dark">
 					<img class="micro-image" src="images/avito.png" alt="Avito">
 					Avito
-					<a class="date">Aug 2022 - Present, Remote</a>
+					<div>
+						<i>Python developer</i>
+						<span class="date">Aug 2022 - Present, Remote</span>
+					</div>
+					
 					<ul class="plane_text">
 						<li>Created a micro-service for automation process to delivery commercial offers from DWH to CRM
 							system
@@ -140,48 +143,56 @@
 						</li>
 					</ul>
 				</h3>
-
+				
 				<hr class="dotted dark">
 				
 				<h3 class="dark">
 					<img class="micro-image" src="images/mvideo.png" alt="Mvideo">
-					M.Video–Eldorado <a style="font-size: 16px; font-weight: lighter;">(Nov 2020 - Aug 2022), Russia</a>
+					M.Video–Eldorado
+					<div>
+						<i>Computer Vision Engineer</i>
+						<span class="date">Nov 2020 - Aug 2022, Russia</span>
+					</div>
 					<ul class="plane_text">
 						<li>Training and validation models for object detection and classification of customers and
 							sellers
 							in
 							shopping rooms
 						</li>
-						<li>Developing a method for cameras calibration and positioning in offline stores using geometric
+						<li>Developing a method for cameras calibration and positioning in offline stores using
+							geometric
 							templates
 						</li>
 						<li>Developing multi-camera tracker of buyers and designing of business and research metrics
 						</li>
 					</ul>
 				</h3>
-
+			
 			</h2>
 			
 			<h2 class="dark" id="code">
 				Code
 				<hr style="border-top: 2px solid #181126DD">
 				<pre>
-								<code class="language-python">
-def tfb_filter(img):
-    rgb = img[:,:,::-1]
-    lab = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
-    l, a, b = lab[:, :, 0], lab[:, :, 1], lab[:, :, 2]
+						<code class="language-python">
+@app.post("/sell-item")
+async def sell_item(data: TransactionData):
+    flag, user = get_user(data.nickname)
+				
+    item_name = data.item_name
+    item = config['equipments'][item_name]
 
-    low_sigma = cv2.GaussianBlur(l, (9,9), sigmaX=1)
-    high_sigma = cv2.GaussianBlur(l, (9,9), sigmaX=4)
+    user.credits += item['price']
+    user.items.remove(item_name)
 
-    blur = cv2.blur(a,(3,3))
-    # Calculate the DoG by subtracting
-    dog = low_sigma - high_sigma
+    update_user(user)
 
-    tfb = np.exp((-1/300)*np.abs(blur + dog))
-							</code>
-							</pre>
+    return {
+        "user_credits": user.credits,
+        "user_items": user.items,
+    }
+					</code>
+				</pre>
 			</h2>
 			
 			<h2 class="dark" id="projects">
@@ -189,29 +200,31 @@ def tfb_filter(img):
 				<hr style="border-top: 2px solid #181126DD">
 				<div class="container" style="display: flex; flex-direction: row">
 					<h3 class="dark left">
-						<a href="https://github.com/alexandraroots/grow_vision" style="text-decoration: none;">Growing plants with CV</a>
+						<a href="https://github.com/alexandraroots/grow_vision" style="text-decoration: none;">Growing
+							plants with CV</a>
 						<br>
-						<img src="images/plant.png" style="width: 30%; height: 60%">
+						<img src="images/plant.png" style="width: 25%; height: 50%">
 					</h3>
 					
 					<h3 class="dark right">
-						<a href="https://github.com/alexandraroots/post_stamps" style="text-decoration: none;">Recognizing post stamps</a>
+						<a href="https://github.com/alexandraroots/post_stamps" style="text-decoration: none;">Recognizing
+							post stamps</a>
 						<br>
-						<img src="images/post_stamp.png" style="width: 30%; height: 50%">
+						<img src="images/post_stamp.png" style="width: 25%; height: 50%">
 					</h3>
-					
-					
-				</div>
 				
+				
+				</div>
+			
 			</h2>
 		</div>
 	</div>
 	
 	<footer>
 		<a href="https://rs.school/courses/javascript" target="_blank">
-			<img src="images/rs-school-logo.svg" style="width: 20%; height: 2.5%">
+			<img src="images/rs-school-logo.svg" style="width: 15%; height: 5%">
 		</a>
-		
+	
 	</footer>
 </page>
 
