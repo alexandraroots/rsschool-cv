@@ -71,7 +71,8 @@ _M.Video–Eldorado (Aug 2021 - Aug 2022), Russia_
 ### Intern Data Science
 _M.Video–Eldorado (Nov 2020 - Aug 2021), Russia_
 
-- Training and validation models for classification of customers and sellers in shopping rooms ◦ Developing algorithm for positioning person from 2D scene to 3D shopping areas
+- Training and validation models for classification of customers and sellers in shopping rooms
+- Developing algorithm for positioning person from 2D scene to 3D shopping areas
 - Designed rules for mark up video-data
 - Support in developing multi-camera tracker of buyers
 
