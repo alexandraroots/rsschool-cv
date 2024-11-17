@@ -6,21 +6,16 @@
 body {
 
     color: var(--custom-light);
-    font-family: Montserrat,sans-serif;
+    font-family: Montserrat, sans-serif;
 }
 
 
-page {
+.page {
     display: block;
     margin: 0 auto;
     margin-bottom: 0.5vh;
-    box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+    box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
     background: var(--custom-dark);
-    position: relative;
-
-}
-
-page[size="A3"] {
     position: relative;
     width: 60%;
     height: 36cm;
@@ -43,9 +38,10 @@ page[size="A3"] {
 }
 
 .image {
+    display: flex;
     clip-path: circle();
-    width: 220px;
-    height: 220px;
+    width: 90%;
+    height: 90%;
     margin: 5%;
 }
 
@@ -63,7 +59,7 @@ page[size="A3"] {
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 2.5em;
     font-weight: bold;
     background: var(--custom-light);
     color: var(--custom-dark);
@@ -79,8 +75,8 @@ h2 {
     font-size: 24px;
     text-align: left;
     text-transform: uppercase;
-    padding: 1vh 0;
-    margin: 0.5vh 0;
+    padding: 1.5vh 0;
+    margin: 1vh 0;
     /*margin-bottom: 2vh;*/
     border-radius: 10px;
 }
@@ -96,7 +92,7 @@ h2.dark {
 h3 {
     font-size: 18px;
     text-align: left;
-    margin: 0 0 1vh 0;
+    margin: 0;
     padding: 0 0 1vh 0;
     border-radius: 20px;
 }
@@ -147,13 +143,13 @@ hr {
     display: block;
     border: 0;
     border-top: 2px solid var(--custom-light);
-    margin-top: 1vh;
+    margin: 0.5vh;
     padding: 0;
 }
 
 hr.dotted {
     border-top: 2px dotted var(--custom-light);
-    margin-bottom: 1vh;
+    margin: 0.5vh 0;
 }
 
 hr.dotted.dark {
@@ -161,13 +157,12 @@ hr.dotted.dark {
 }
 
 
-
 .light_block {
     background: var(--custom-light);
     border-radius: 10px;
 }
 
-.date {
+span.date {
     font-size: 16px;
     font-weight: lighter;
     text-align: right;
@@ -175,12 +170,13 @@ hr.dotted.dark {
 
 
 ul {
-    padding-left: 1vw;
-    margin: 0;
+    padding: 0.5vh 1.5vw;
+    margin: 0 1vw;
 }
 
 ul.skills {
-    padding-left: 0.05vw;
+    padding-left: 0;
+    margin: 0;
     list-style-type: none;
 }
 
@@ -204,29 +200,22 @@ li {
     text-align: center;
 }
 
-pre {
-    border-radius: 5px;
-    background: #f5f5f5;
-    text-align: left;
-    text-transform: none;
-    font-size: 14px;
-    padding: 0;
-    margin: 0;
-
-}
-code {
-    font-family: "Courier New", monospace;
-    color: #2c3e50;
-    padding: 0;
-    margin: 0;
-}
 
 pre[class*="language-"], code[class*="language-"] {
     line-height: 1.2;
     font-size: 14px;
-    padding: .05vh .5vw;
+    padding: .05vh 1vw;
+    margin: 0;
 }
 
 footer {
-    margin: 10vh 2vh;
+    margin: 5vh 2vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+.dark-text {
+    color: var(--custom-dark);
 }
